@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processo Seletivo - Biomedicina</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Concurso de Biomedicina</h1>
+        <p class="subtitle">Verificação de pré-requisitos para a vaga</p>
+        
+        <form id="cadastroForm">
+            <div class="input-group">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" required placeholder="Digite seu nome">
+            </div>
+            
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="idade">Idade (anos):</label>
+                    <input type="number" id="idade" required min="0" placeholder="Ex: 20">
+                </div>
+                <div class="input-group">
+                    <label for="altura">Altura (metros):</label>
+                    <input type="number" id="altura" required step="0.01" min="0" placeholder="Ex: 1.75">
+                </div>
+            </div>
+            
+            <button type="submit">Avaliar Candidato</button>
+        </form>
+
+        <div id="resultado" class="result-box hidden"></div>
+
+        <div class="candidatos-section">
+            <h2>Candidatos Avaliados</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Idade</th>
+                            <th>Altura</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listaCandidatos">
+                        </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
